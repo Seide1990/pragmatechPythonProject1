@@ -9,11 +9,12 @@ from django.conf.urls.static import static
 #from index.views import Home
 
 from mekteb import  views
+from contact.views import contact
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mekteb/',views.siyahi,name='mekteb'),
     path('',views.index,name='index'),
-
+    path('contact/',contact,name='contact'),
     
 ]
 

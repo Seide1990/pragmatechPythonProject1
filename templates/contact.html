@@ -23,7 +23,22 @@
       </ul>
     </div>
   </nav>
-<h1>index</h1>
+
+<form action="/contact/" method="post">
+    {% csrf_token %}
+
+        {% for field in form %}
+        
+        <div class="form-group ">
+            {{ field.label_tag }}
+            {{ field}}
+        </div>
+        
+        {% endfor %}
+
+        <input type="submit" value="Submit">
+</form>
+
 </body>
 </head>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
