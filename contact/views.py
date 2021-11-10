@@ -9,6 +9,8 @@ def contact(request):
         form = ContactForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/mekteb/')
-    return render(request, 'contact.html', {'form': form})
-# Create your views here.
+        return redirect('/mekteb/')
+    return render(request,'contact.html',{'form':form})
+        
+    
+
