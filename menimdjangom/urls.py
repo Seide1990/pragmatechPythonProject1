@@ -15,6 +15,6 @@ urlpatterns = [
     path('mekteb/',views.siyahi,name='mekteb'),
     path('',views.index,name='index'),
     path('contact/',contact,name='contact'),
-    
+    path('muellimler/',views.muellimler,name='muellimler'),
 ]
 

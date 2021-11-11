@@ -5,11 +5,9 @@ from django.db.models.deletion import CASCADE
 class Muellimler(models.Model):
     ad=models.CharField(max_length=127,null=True,blank=True)
     soyad=models.CharField(max_length=127,null=True,blank=True)
-    #text=models.TextField(help_text='bura melumat daxil et')
     tarix=models.DateTimeField(auto_now_add=True)
     fenn=models.ForeignKey('Fennler',on_delete=models.CASCADE,null=True, related_name='Fennlers')
     #image=models.ImageField(upload_to='media/product/images')
-    #fenn=models.CharField(max_length=127,null=True,blank=True)
 
     def __str__(self):
          return self.ad        # admin sehifesinde titleler gorunsun

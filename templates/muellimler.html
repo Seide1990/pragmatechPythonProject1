@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> muellimler</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">N</th>
+      <th scope="col">ad</th>
+      <th scope="col">soyad</th>
+      <th scope="col">fenn</th>
+      <th scope="col">tarix</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for sec in muellim%}
+    <tr>
+      <th scope="row">{{sec.id}}</th>
+      <td>{{sec.ad}}</td>
+      <td>{{sec.soyad}}</td>
+      <td>{{sec.fenn}}</td>
+      <td>{{sec.tarix}}</td>
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock %}
