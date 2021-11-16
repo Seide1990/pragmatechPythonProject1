@@ -19,8 +19,9 @@
       <td>{{sec.ad}}</td>
       <td>{{sec.soyad}}</td>
       <td>{{sec.fenn}}</td>
-      <td>{{sec.tarix}}</td>
-      
+      <td>{{sec.tarix|date:"M Y"}}</td>
+      {% empty %}
+      <h1> muellimlerin siyahisi movcud deyil</h1>
     </tr>
     {% endfor %}
   </tbody>
